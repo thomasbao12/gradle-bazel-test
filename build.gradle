@@ -18,6 +18,10 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    flatDir {
+      dirs 'libs'
+      //dirs 'bazel-bin/src/main/java/gradle/bazel/tests'
+    }
 }
 
 dependencies {
@@ -26,6 +30,8 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+    testImplementation fileTree(dir: 'libs', include: 'App.jar')
 }
 
 application {
