@@ -1,5 +1,10 @@
 # Ignore Gradle project-specific cache directory
+.sw[a-z]
 .gradle
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-gradle-bazel-test
 
 # Ignore Gradle build output directory
 build
